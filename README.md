@@ -48,5 +48,5 @@ MapReduce
 
 ### Run
 ```bash
-   python manage.py runserver
+   python FileName.py data
 
