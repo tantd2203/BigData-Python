@@ -1,9 +1,8 @@
-# Project Name
-MapReduce
+# Project Name: MapReduce
+
 
 ## Table of Contents
 - [Installation](#installation)
-- [Configuration](#configuration)
 
 ## Installation
 
