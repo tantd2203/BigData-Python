@@ -2,18 +2,26 @@ from mrjob.job import MRJob
 
 class MRFriendsByAge(MRJob):
 
+    
     def mapper(self, _, line):
         (ID, name, age, numFriends) = line.split(',')
-        yield age, float(numFriends)
+        yield age, float(numFriends)            
+     
 
-    def reducer(self, age, numFriends):
-        total = 0
-        numElements = 0
-        for x in numFriends:
-            total += x
-            numElements += 1
-            
-        yield age, total / numElements
+    #  count  average  with age by key and numFreinds by value
+    def reducer(self , age ,numFrineds ):
+             total = 0
+             numElement =0
+
+             for x in numFrineds:
+                total +=x
+                numElement+=1
+                
+             average =  total / numElement 
+        
+             yield age , average
+
+    
 
 
 if __name__ == '__main__':
