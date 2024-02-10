@@ -1,7 +1,8 @@
 from mrjob.job import MRJob
 
 class MRMinTemperature(MRJob):
-
+    
+    # covert  C to F 
     def MakeFahrenheit(self, tenthsOfCelsius):
         celsius = float(tenthsOfCelsius) / 10.0
         fahrenheit = celsius * 1.8 + 32.0
