@@ -8,18 +8,19 @@ class MRFriendsByAge(MRJob):
         yield age, float(numFriends)            
      
 
-    #  count  average  with age by key and numFreinds by value
-    def reducer(self , age ,numFrineds ):
-             total = 0
-             numElement =0
+    # #  count  average  with age by key and numFreinds by value
+    def reducer(self , age ,numFrineds ):g
+            #  total = 0
+            #  numElement =0
 
-             for x in numFrineds:
-                total +=x
-                numElement+=1
+            #  for x in numFrineds:
+            #     total +=x
+            #     numElement+=1
                 
-             average =  total / numElement 
+            #  average =  total / numElement 
+             v=  numFrineds
         
-             yield age , average
+             yield age , list(v)
 
     
 
